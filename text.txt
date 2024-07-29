@@ -1,2 +1,2 @@
 Test
-MAJOR update
+MINOR update
