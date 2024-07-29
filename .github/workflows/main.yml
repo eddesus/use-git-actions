@@ -2,28 +2,26 @@ on:
   workflow_dispatch:
 
 jobs:
-  my_job:
-    name: deploy to staging
+  semantic_version:
     runs-on: ubuntu-22.04
-    
-  steps:
-    - name: Checkout
-      uses: actions/checkout@v3  
-      with:
-        fetch-depth: 0
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3  
+        with:
+          fetch-depth: 0
         
   
-    - name: Perform semantic version
-      uses: paulhatch/semantic-version@v5.4.0
-      id: semantic_version
-      with:
-        tag_prefix: "v"
-        major_pattern:  "(MAJOR)"
-        minnor_pattern: "(MINOR)"
-        version_format: "${major}.${minor}.${patch}-prerelease${increment}"
-        user_format_type: "csv"
-        bump_each_commit: false
-        search_commit_body: false
-        namespace: my-service
+      - name: Perform semantic version
+        uses: paulhatch/semantic-version@v5.4.0
+        id: semantic_version
+        with:
+          tag_prefix: "v"
+          major_pattern:  "(MAJOR)"
+          minnor_pattern: "(MINOR)"
+          version_format: "${major}.${minor}.${patch}-prerelease${increment}"
+          user_format_type: "csv"
+          bump_each_commit: false
+          search_commit_body: false
+          namespace: my-service
 
       
