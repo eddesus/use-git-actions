@@ -24,5 +24,7 @@ jobs:
           bump_each_commit: false
           search_commit_body: false
           namespace: my-service
+          enable_prerelease_mode: true
+
 
       
