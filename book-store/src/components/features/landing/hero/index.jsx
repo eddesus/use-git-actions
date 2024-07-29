@@ -30,7 +30,7 @@ const Hero = () => {
               src={`${process.env.PUBLIC_URL}/assets/landing/hero/iconLine.png`}
               alt='icon'
             />
-            Welcome to Pages
+            Welcome to Sample App
           </div>
           <div className='flex flex-col gap-[32px] xl:mb-[49px]'>
             <div className='text-[65px] font-cardo'>
