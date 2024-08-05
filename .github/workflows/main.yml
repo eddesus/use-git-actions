@@ -21,7 +21,7 @@ jobs:
           minnor_pattern: "(MINOR)"
           version_format: "${major}.${minor}.${patch}-prerelease${increment}"
           user_format_type: "csv"
-          bump_each_commit: false
+          bump_each_commit: true
           search_commit_body: false
           namespace: my-service
           enable_prerelease_mode: false
